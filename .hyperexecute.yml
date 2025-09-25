@@ -8,19 +8,17 @@ runson: win
 
 concurrency: 2
 
-retryOnFailure: false
-
-maxRetries: 1
+autosplit: true
 
 pre:
   - npm install
 
 testDiscovery:
   type: raw
-  mode: static
-  command: ls tests/
+  mode: dynamic
+  command: "npx playwright list-files tests/*.spec.js"
 
-testRunnerCommand: npx playwright test tests/
+testRunnerCommand: npx playwright test $test
 
 jobLabel: [playwright-sample]
 

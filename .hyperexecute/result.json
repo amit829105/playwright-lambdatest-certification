@@ -1,11 +1,11 @@
 {
-    "id": "0807376d-5762-452c-9886-420e1b9c4210",
-    "created_at": "2025-09-25T22:15:56Z",
-    "update_at": "2025-09-25T22:16:27Z",
+    "id": "9b31a02d-4494-4e1f-9d1f-3a7a30c487b0",
+    "created_at": "2025-09-25T22:22:08Z",
+    "update_at": "2025-09-25T22:22:34Z",
     "global_timeout": 90,
     "tunnel_name": "",
-    "start_time": "2025-09-25T22:16:16Z",
-    "end_time": "2025-09-25T22:16:27Z",
+    "start_time": "2025-09-25T22:22:23Z",
+    "end_time": "2025-09-25T22:22:34Z",
     "summary": {
         "total_time": 11000000000,
         "execution_time": 11000000000,
@@ -21,31 +21,31 @@
             }
         },
         "status": "completed",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=0807376d-5762-452c-9886-420e1b9c4210"
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=9b31a02d-4494-4e1f-9d1f-3a7a30c487b0"
     },
     "tasks": [
         {
-            "id": "HYPW-2764528-1758838575074950947AJP",
+            "id": "HYPW-2764528-1758838942546229416YNU",
             "os": "win",
             "status": "completed",
             "remark": "completed",
             "debug": false,
-            "created_at": "2025-09-25T22:16:15Z",
-            "update_at": "2025-09-25T22:16:27Z",
-            "start_time": "2025-09-25T22:16:16Z",
-            "end_time": "2025-09-25T22:16:27Z",
+            "created_at": "2025-09-25T22:22:22Z",
+            "update_at": "2025-09-25T22:22:34Z",
+            "start_time": "2025-09-25T22:22:23Z",
+            "end_time": "2025-09-25T22:22:34Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "4644dc5f-806b-44ce-b893-81d0bca46244",
+                    "id": "265f16d1-599f-483c-b821-d669be77e07a",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-09-25T22:16:16Z",
-                    "started_at": "2025-09-25T22:16:16Z",
-                    "updated_at": "2025-09-25T22:16:26Z",
+                    "created_at": "2025-09-25T22:22:23Z",
+                    "started_at": "2025-09-25T22:22:23Z",
+                    "updated_at": "2025-09-25T22:22:34Z",
                     "order": 1,
                     "task_number": 1
                 }
