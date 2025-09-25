@@ -4,18 +4,18 @@
   "description": "Playwright automation tests for LambdaTest certification assignment",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/simpleFormDemo.js && node tests/dragDropSliders.js && node tests/inputFormSubmit.js",
-    "test:simple": "node tests/simpleFormDemo.js",
-    "test:slider": "node tests/dragDropSliders.js",
-    "test:form": "node tests/inputFormSubmit.js"
+    "test": "npx playwright test",
+    "test:simple": "npx playwright test tests/simpleFormDemo.spec.js",
+    "test:slider": "npx playwright test tests/dragDropSliders.spec.js",
+    "test:form": "npx playwright test tests/inputFormSubmit.spec.js",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
   },
   "keywords": ["playwright", "automation", "testing", "lambdatest"],
-  "author": "Amit Kumar <amit@example.com>",
+  "author": "Amit Kumar",
   "license": "MIT",
-  "dependencies": {
-    "playwright": "^1.40.0"
-  },
   "devDependencies": {
-    "@playwright/test": "^1.40.0"
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0"
   }
 }
