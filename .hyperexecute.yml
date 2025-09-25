@@ -1,14 +1,12 @@
 version: 0.1
 
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
+globalTimeout: 120
+testSuiteTimeout: 120
+testSuiteStep: 120
 
 runson: win
 
 concurrency: 2
-
-autosplit: true
 
 pre:
   - npm install
@@ -19,16 +17,11 @@ testDiscovery:
   mode: dynamic
   command: npx playwright test --list --reporter=json
 
-testRunnerCommand: npx playwright test --project=$HYPEREXECUTE_SPLIT_ID
+testRunnerCommand: npx playwright test $test
 
 env:
-  LT_USERNAME: $LT_USERNAME
-  LT_ACCESS_KEY: $LT_ACCESS_KEY
-  PLAYWRIGHT_JUNIT_OUTPUT_NAME: results/junit-report.xml
-
-secrets:
-  - name: LT_USERNAME
-  - name: LT_ACCESS_KEY
+  LT_USERNAME: $env:LT_USERNAME
+  LT_ACCESS_KEY: $env:LT_ACCESS_KEY
 
 cache:
   - node_modules
@@ -36,21 +29,13 @@ cache:
 
 framework:
   name: playwright
-  defaultReports: false
 
 report: true
-partialReports:
-  frameworkName: playwright
-  location: results
-  type: json
 
 uploadArtefacts:
-  - name: playwright-logs
+  - name: test-results
     path:
-      - results/**
-  - name: test-videos
+      - test-results/**
+  - name: playwright-report
     path:
-      - test-results/**/*.webm
-  - name: test-screenshots
-    path:
-      - test-results/**/*.png
+      - playwright-report/**
