@@ -8,7 +8,7 @@ runson: win
 
 concurrency: 2
 
-autosplit: true
+autosplit: true  # Enables parallel splits automatically
 
 pre:
   - npm install
@@ -16,9 +16,9 @@ pre:
 testDiscovery:
   type: raw
   mode: dynamic
-  command: "npx playwright list-files tests/*.spec.js"
+  command: npx playwright list-files tests/*.spec.js  # Dynamically finds your test files
 
-testRunnerCommand: npx playwright test $test
+testRunnerCommand: npx playwright test $test  # Runs each test file individually
 
 jobLabel: [playwright-sample]
 

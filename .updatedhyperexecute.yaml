@@ -1,6 +1,7 @@
 accessibilityJob: false
 alwaysRunPostSteps: false
 appium: null
+autosplit: true
 betaFeature:
     setPartiallyCompletedAsCompleted: false
 captureScreenRecordingForScenarios: false
@@ -99,13 +100,12 @@ globalPre:
     workingDirectory: ""
     yamlPath: null
 globalTimeout: 90
-jobID: 9b31a02d-4494-4e1f-9d1f-3a7a30c487b0
+jobID: 1356c00c-182f-47ca-9508-1b877ae50f0c
 jobLabel:
     - playwright-sample
 key: '********'
 localHTTPProxy: ""
 ltOptions: {}
-maxRetries: 1
 maxRetriesPreSteps: 0
 meta: {}
 partialReports:
@@ -151,11 +151,12 @@ sourcePayload:
 sprofilePath: ""
 storageType: ""
 testDiscovery:
-    command: ls tests/
-    mode: static
+    autosubset: true
+    command: npx playwright list-files tests/*.spec.js
+    mode: dynamic
     type: raw
 testDiscoveryResultV3: []
-testRunnerCommand: npx playwright test tests/
+testRunnerCommand: npx playwright test $test
 testSuiteStep: 90
 testSuiteTimeout: 90
 testSuites: []
