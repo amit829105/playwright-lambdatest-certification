@@ -1,0 +1,179 @@
+accessibilityJob: false
+alwaysRunPostSteps: false
+appium: null
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+captureScreenRecordingForScenarios: false
+codeDirectory: Playwright
+collectLocalGitData: true
+combineTasksInMatrixMode: false
+concurrency: 2
+cypress: false
+differentialUpload:
+    enabled: false
+    forcedDisabled: false
+    ttlHours: null
+dynamicAllocation: false
+env:
+    PLAYWRIGHT_JUNIT_OUTPUT_NAME: results/junit-report.xml
+errorCategorizedOnFailureOnly: false
+framework:
+    additional_args: null
+    args:
+        appId: ""
+        appPath: ""
+        artifacts: false
+        autoGrantPermissions: false
+        avoidAppLaunch: false
+        customData: {}
+        darkMode: false
+        deviceSelectionStrategy: ""
+        devices: []
+        disableReleaseDevice: false
+        enableResultBundle: false
+        filters:
+            attributes: []
+        fixedIP: ""
+        isRealMobile: null
+        isVirtualDevice: false
+        language: ""
+        locale: ""
+        minorOsVersion: false
+        mitmProxy: false
+        mobileDC: null
+        networkHar: false
+        networkLogsOptions:
+            captureContent: false
+            excludeHosts: []
+            includeHosts: []
+        otherApps: []
+        platformName: ""
+        playwrightRD: false
+        preservedDevice: false
+        queueTimeout: 0
+        resignApp: null
+        shards:
+            mappings: []
+        skipInstall: false
+        skipUninstallPreviousBuild: false
+        skipXMLOnRun: false
+        smartUI: null
+        testRemarks: false
+        testSuiteAppId: ""
+        testSuitePath: ""
+        uninstallPreviousBuild: false
+        xcTestPlanId: ""
+        xcTestPlanPath: ""
+    baseCommand: ""
+    defaultReports: false
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    downloadURL: ""
+    flags: []
+    isTestNGXMLSuite: false
+    licenseKey: ""
+    name: playwright
+    runnerFlags: []
+    toscaArgs: null
+    userdefinediscovery: false
+    version: ""
+    workingDirectory: ""
+globalPost:
+    commands: []
+    completed: false
+    mode: ""
+    runson: ""
+    shell: ""
+    workingDirectory: ""
+globalPre:
+    cache: false
+    commands: []
+    completed: false
+    location: ""
+    maxRetries: 0
+    mode: ""
+    runson: ""
+    shell: ""
+    type: ""
+    workingDirectory: ""
+    yamlPath: null
+globalTimeout: 90
+jobID: 0807376d-5762-452c-9886-420e1b9c4210
+jobLabel:
+    - playwright-sample
+key: '********'
+localHTTPProxy: ""
+ltOptions: {}
+maxRetries: 1
+maxRetriesPreSteps: 0
+meta: {}
+partialReports:
+    type: json
+    location: results
+    frameworkName: playwright
+    email:
+        to: []
+        metaInfo: []
+        linkValidity: 0
+    configPath: ""
+    configPathURL: ""
+platformConfig: null
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+pre:
+    - npm install
+preDirectives:
+    commands:
+        - npm install
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: 01K5W83J1K8WAGD3QSVQ95SFCW
+    name: LambdaTest Default Project
+    type: custom
+projectpath: ""
+regionConfig:
+    storage:
+        enabled: false
+        name: ""
+        platform: azure
+        region: ""
+    vm: []
+report: true
+runson: win
+slackChannel: ""
+sourcePayload:
+    verifySSL: true
+sprofilePath: ""
+storageType: ""
+testDiscovery:
+    command: ls tests/
+    mode: static
+    type: raw
+testDiscoveryResultV3: []
+testRunnerCommand: npx playwright test tests/
+testSuiteStep: 90
+testSuiteTimeout: 90
+testSuites: []
+testType: playwright
+triggerMode: false
+triggerSource: CLI
+tunnelOpts:
+    testsPerTunnel: 10
+unzipPayload: false
+uploadArtefacts:
+    - email:
+        linkValidity: 0
+        metaInfo: []
+        to: []
+      name: playwright-logs
+      path:
+        - results/**
+user: amitk26hexaware
+version: "0.1"
+waitForArtefactsUpload: false
+whiteLabelProductTag: ""

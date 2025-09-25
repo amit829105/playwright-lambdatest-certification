@@ -20,7 +20,7 @@ testDiscovery:
   mode: static
   command: ls tests/
 
-testRunnerCommand: npx playwright test $test --project=chromium
+testRunnerCommand: npx playwright test tests/
 
 jobLabel: [playwright-sample]
 
