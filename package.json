@@ -1,0 +1,21 @@
+{
+  "name": "playwright-lambdatest-certification",
+  "version": "1.0.0",
+  "description": "Playwright automation tests for LambdaTest certification assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/simpleFormDemo.js && node tests/dragDropSliders.js && node tests/inputFormSubmit.js",
+    "test:simple": "node tests/simpleFormDemo.js",
+    "test:slider": "node tests/dragDropSliders.js",
+    "test:form": "node tests/inputFormSubmit.js"
+  },
+  "keywords": ["playwright", "automation", "testing", "lambdatest"],
+  "author": "Amit Kumar <amit@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

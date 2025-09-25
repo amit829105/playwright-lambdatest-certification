@@ -1,0 +1,16 @@
+tasks:
+  - name: Setup Environment
+    init: |
+      npm install
+      npx playwright install
+    command: |
+      echo "🚀 Playwright environment ready!"
+      echo "▶️ Run tests with: npm run test"
+
+ports:
+  - port: 3000
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - ms-playwright.playwright
