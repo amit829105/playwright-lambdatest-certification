@@ -14,10 +14,10 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: dynamic
-  command: npx playwright test --list --reporter=json
+  mode: static
+  command: echo "tests/simpleFormDemo.spec.js tests/dragDropSliders.spec.js tests/inputFormSubmit.spec.js"
 
-testRunnerCommand: npx playwright test $test
+testRunnerCommand: npx playwright test $test --reporter=html,json,junit --output=test-results/
 
 env:
   LT_USERNAME: $env:LT_USERNAME
