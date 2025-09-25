@@ -1,0 +1,43 @@
+version: 0.1
+
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+
+runson: win
+
+concurrency: 2
+
+retryOnFailure: false
+
+maxRetries: 1
+
+pre:
+  - npm install
+
+testDiscovery:
+  type: raw
+  mode: static
+  command: ls tests/
+
+testRunnerCommand: npx playwright test $test --project=chromium
+
+jobLabel: [playwright-sample]
+
+env:
+  PLAYWRIGHT_JUNIT_OUTPUT_NAME: results/junit-report.xml
+
+framework:
+  name: playwright
+  defaultReports: false
+
+report: true
+partialReports:
+  frameworkName: playwright
+  location: results
+  type: json
+
+uploadArtefacts:
+  - name: playwright-logs
+    path:
+      - results/**
