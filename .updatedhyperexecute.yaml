@@ -18,16 +18,16 @@ env:
 runson: win
 concurrency: 2
 testDiscovery:
-    command: npx playwright test --list --reporter=json
-    mode: dynamic
+    command: echo "tests/simpleFormDemo.spec.js tests/dragDropSliders.spec.js tests/inputFormSubmit.spec.js"
+    mode: static
     type: raw
-testRunnerCommand: npx playwright test $test
+testRunnerCommand: npx playwright test $test --reporter=html,json,junit --output=test-results/
 globalTimeout: 120
 tunnelOpts:
     testsPerTunnel: 10
 testSuiteTimeout: 120
 testSuiteStep: 120
-jobID: 823de4fc-e2b1-41df-aa93-1a5c6ab2e7f8
+jobID: 89766efc-d7e9-4109-b3df-bd26c56aa081
 uploadArtefacts:
     - name: test-results
       path:

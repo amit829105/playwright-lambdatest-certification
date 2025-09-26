@@ -1,16 +1,16 @@
 {
-    "id": "823de4fc-e2b1-41df-aa93-1a5c6ab2e7f8",
-    "created_at": "2025-09-25T23:53:39Z",
-    "update_at": "2025-09-25T23:54:32Z",
+    "id": "89766efc-d7e9-4109-b3df-bd26c56aa081",
+    "created_at": "2025-09-25T23:58:45Z",
+    "update_at": "2025-09-25T23:59:55Z",
     "global_timeout": 120,
     "tunnel_name": "",
-    "start_time": "2025-09-25T23:54:01Z",
-    "end_time": "2025-09-25T23:54:32Z",
+    "start_time": "2025-09-25T23:59:12Z",
+    "end_time": "2025-09-25T23:59:55Z",
     "summary": {
-        "total_time": 31000000000,
-        "execution_time": 31000000000,
+        "total_time": 43000000000,
+        "execution_time": 43000000000,
         "total_tasks": 1,
-        "build_time_consumed": 31000000000,
+        "build_time_consumed": 43000000000,
         "jobTestExecutionTime": "0s",
         "failed_tasks": 0,
         "total_stage_info": {
@@ -21,31 +21,31 @@
             }
         },
         "status": "completed",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=823de4fc-e2b1-41df-aa93-1a5c6ab2e7f8"
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=89766efc-d7e9-4109-b3df-bd26c56aa081"
     },
     "tasks": [
         {
-            "id": "HYPW-2764528-1758844439688092033KHR",
+            "id": "HYPW-2764528-1758844751952778678CRU",
             "os": "win",
             "status": "completed",
             "remark": "completed",
             "debug": false,
-            "created_at": "2025-09-25T23:53:59Z",
-            "update_at": "2025-09-25T23:54:32Z",
-            "start_time": "2025-09-25T23:54:01Z",
-            "end_time": "2025-09-25T23:54:32Z",
+            "created_at": "2025-09-25T23:59:12Z",
+            "update_at": "2025-09-25T23:59:55Z",
+            "start_time": "2025-09-25T23:59:12Z",
+            "end_time": "2025-09-25T23:59:55Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "4be18d18-533c-42a1-880a-bdfc8a5e9ab9",
+                    "id": "be0297ca-fc5b-4957-8344-acdd13b56a6a",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-09-25T23:54:01Z",
-                    "started_at": "2025-09-25T23:54:01Z",
-                    "updated_at": "2025-09-25T23:54:32Z",
+                    "created_at": "2025-09-25T23:59:13Z",
+                    "started_at": "2025-09-25T23:59:13Z",
+                    "updated_at": "2025-09-25T23:59:55Z",
                     "order": 1,
                     "task_number": 1
                 }
