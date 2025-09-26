@@ -1,5 +1,8 @@
 const { defineConfig, devices } = require('@playwright/test');
 
+// Check if we're running on HyperExecute/LambdaTest
+const isLambdaTest = process.env.LT_USERNAME && process.env.LT_ACCESS_KEY;
+
 module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: true,
@@ -15,7 +18,8 @@ module.exports = defineConfig({
     video: 'on',
   },
 
-  projects: [
+  projects: isLambdaTest ? [
+    // LambdaTest configurations for HyperExecute
     {
       name: 'lambda-chrome',
       use: {
@@ -60,5 +64,15 @@ module.exports = defineConfig({
         }
       },
     }
+  ] : [
+    // Local configurations for testing
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
   ],
 });
