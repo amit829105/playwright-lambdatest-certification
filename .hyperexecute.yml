@@ -4,9 +4,7 @@ globalTimeout: 120
 testSuiteTimeout: 120
 testSuiteStep: 120
 
-runson: 
-  - win
-  - linux
+runson: win, linux
 
 concurrency: 2
 
@@ -17,7 +15,7 @@ pre:
 testDiscovery:
   type: raw
   mode: dynamic
-  command: npx playwright test --list --reporter=json | findstr "file" || npx playwright test --list --reporter=json | grep "file"
+  command: npx playwright test --list --reporter=json
 
 testRunnerCommand: npx playwright test $test --reporter=html,json,junit --output=test-results/
 
