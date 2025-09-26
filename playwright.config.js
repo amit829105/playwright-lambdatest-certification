@@ -17,12 +17,48 @@ module.exports = defineConfig({
 
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'lambda-chrome',
+      use: {
+        ...devices['Desktop Chrome'],
+        connectOptions: {
+          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify({
+            browserName: 'Chrome',
+            browserVersion: 'latest',
+            'LT:Options': {
+              platform: 'Windows 10',
+              build: 'Playwright HyperExecute Build',
+              name: 'Chrome on Windows 10',
+              user: process.env.LT_USERNAME,
+              accessKey: process.env.LT_ACCESS_KEY,
+              network: true,
+              video: true,
+              console: true
+            }
+          }))}`
+        }
+      },
     },
     {
-      name: 'firefox', 
-      use: { ...devices['Desktop Firefox'] },
-    },
+      name: 'lambda-firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        connectOptions: {
+          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify({
+            browserName: 'Firefox',
+            browserVersion: 'latest',
+            'LT:Options': {
+              platform: 'Windows 10',
+              build: 'Playwright HyperExecute Build',
+              name: 'Firefox on Windows 10',
+              user: process.env.LT_USERNAME,
+              accessKey: process.env.LT_ACCESS_KEY,
+              network: true,
+              video: true,
+              console: true
+            }
+          }))}`
+        }
+      },
+    }
   ],
 });

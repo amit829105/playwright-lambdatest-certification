@@ -4,7 +4,9 @@ globalTimeout: 120
 testSuiteTimeout: 120
 testSuiteStep: 120
 
-runson: win
+runson: 
+  - win
+  - linux
 
 concurrency: 2
 
@@ -14,8 +16,8 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: static
-  command: echo "tests/simpleFormDemo.spec.js tests/dragDropSliders.spec.js tests/inputFormSubmit.spec.js"
+  mode: dynamic
+  command: npx playwright test --list --reporter=json | findstr "file" || npx playwright test --list --reporter=json | grep "file"
 
 testRunnerCommand: npx playwright test $test --reporter=html,json,junit --output=test-results/
 
