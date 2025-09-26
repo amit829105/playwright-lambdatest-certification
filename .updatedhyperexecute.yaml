@@ -18,16 +18,16 @@ env:
 runson: win
 concurrency: 2
 testDiscovery:
-    command: npx playwright test --list --reporter=json
+    command: cmd /c "dir tests\*.spec.js /b"
     mode: dynamic
     type: raw
-testRunnerCommand: npx playwright test $test --reporter=html,json,junit --output=test-results/
+testRunnerCommand: npx playwright test tests/$test --reporter=html,json,junit --output=test-results/
 globalTimeout: 120
 tunnelOpts:
     testsPerTunnel: 10
 testSuiteTimeout: 120
 testSuiteStep: 120
-jobID: 79385124-9816-4cfc-bc0d-57e5f65a8a49
+jobID: 368cc230-da89-460f-82eb-2973dfbd3450
 uploadArtefacts:
     - name: test-results
       path:
